@@ -25,15 +25,15 @@
 <body>
     
 
-    <main class="debug flex just-cont-center align-it-center bg-linear-grad height-100vh" id="app">
+    <main class="flex just-cont-center align-it-center bg-linear-grad height-100vh" id="app">
 
-        <div class="debug width-85 height-95 flex">
+        <div class="width-85 height-95 flex">
             
             <!-- start: left area -->
-            <div class="debug width-30">
+            <div class="width-30">
 
                 <!-- start: user -->
-                <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar">
+                <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar" style="border-right: 1px solid #d3d3d3;">
                     <div class="width-70 flex align-it-center">
                         
                         <img src="./assets/img/avatar_io.jpg" alt="mine-avatar" style="width: 3rem; border-radius: 50%;" >
@@ -98,7 +98,7 @@
                 <!-- end: search chat -->
 
                 <!-- start: chats -->
-                <div class="height-chats bg-white " style="overflow: auto;">
+                <div class="height-chats bg-white " style="overflow-y: scroll;">
                     
                     <!-- start: card with single chat (Vue) -->
                     <div class="style-card-chat" v-for="(contact, index) in contacts" >
@@ -127,7 +127,7 @@
             <!-- end: left area -->
 
             <!-- start: right area -->
-            <div class="debug width-70">
+            <div class="width-70">
 
                 <!-- start: main chat top -->
                 <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar">
@@ -142,7 +142,7 @@
                 <!-- end: main chat top -->
                 
                 <!-- start: main chat messages -->
-                <div class="height-main-chat bg-chat-messages" style="overflow: auto;">
+                <div class="height-main-chat bg-chat-messages" style="overflow-y: scroll;">
                     
                 </div>
                 <!-- end: main chat messages -->
