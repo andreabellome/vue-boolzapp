@@ -2,6 +2,7 @@
 :root{
     --height-top-avatar: 60px;
     --height-top-notifications: 75px;
+    --height-input-chat: 70px;
 }
 
 .bg-linear-grad{
@@ -19,6 +20,10 @@
     background-color: #8EDAFC;
 }
 
+.bg-chat-messages{
+    background-image: url(../img/mine.jpg);
+}
+
 .height-top-avatar{
     height: var(--height-top-avatar);
 }
@@ -32,6 +37,6 @@
 }
 
 .height-main-chat{
-    height: calc(100% - var(--height-top-avatar));
+    height: calc(100% - var(--height-top-avatar) - var(--height-input-chat));
 }
 
