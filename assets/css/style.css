@@ -1,8 +1,8 @@
-
 :root{
     --height-top-avatar: 60px;
     --height-top-notifications: 75px;
     --height-input-chat: 70px;
+    --height-search-chat: 50px;
 }
 
 .bg-linear-grad{
@@ -24,6 +24,10 @@
     background-image: url(../img/mine.jpg);
 }
 
+.height-search-chat{
+    height: var(--height-search-chat);
+}
+
 .height-top-avatar{
     height: var(--height-top-avatar);
 }
@@ -33,7 +37,7 @@
 }
 
 .height-chats{
-    height: calc(100% - var(--height-top-notifications) - var(--height-top-avatar));
+    height: calc(100% - var(--height-top-notifications) - var(--height-top-avatar) - var(--height-search-chat));
 }
 
 .height-main-chat{
@@ -46,4 +50,12 @@
 
 .width-30-important{
     width: 30% !important;
+}
+
+.style-card-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #d3d3d3;
 }

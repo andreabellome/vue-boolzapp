@@ -3,7 +3,7 @@ createApp({
     data() {
       return {
         /* variables Vue 3 */
-        
+
         contacts: [
         {
             name: 'Michele',
