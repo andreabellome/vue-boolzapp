@@ -1,8 +1,25 @@
 
+:root{
+    --height-top-avatar: 60px;
+    --height-top-notifications: 75px;
+}
+
 .bg-linear-grad{
     background: linear-gradient(
     to bottom,
     #00A884 15%,
     #DDDEDD 50px);
-
 }
+
+.bg-top{
+    background-color: #f0f0f0;
+}
+
+.height-top-avatar{
+    height: var(--height-top-avatar);
+}
+
+.height-top-notifications{
+    height: var(--height-top-notifications);
+}
+
