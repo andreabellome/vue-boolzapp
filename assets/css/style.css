@@ -1,0 +1,8 @@
+
+.bg-linear-grad{
+    background: linear-gradient(
+    to bottom,
+    #00A884 15%,
+    #DDDEDD 50px);
+
+}

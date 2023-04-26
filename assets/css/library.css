@@ -213,8 +213,20 @@ a{
     width: calc(100%/3 - 3%);
 }
 
+.height-100vh{
+    height: 100vh;
+}
+
 .height-100p100{
     height: 100%;
+}
+
+.height-5{
+    height: 5%;
+}
+
+.height-10{
+    height: 10%;
 }
 
 .height-15{
@@ -239,6 +251,14 @@ a{
 
 .height-80{
     height: 80%;
+}
+
+.height-90{
+    height: 90%;
+}
+
+.height-95{
+    height: 95%;
 }
 
 /* .height-100{
