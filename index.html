@@ -29,12 +29,18 @@
 
         <div class="debug width-85 height-95 flex">
             
+            <!-- start: left area -->
             <div class="debug width-30">
 
+                <!-- start: user -->
                 <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar">
-                    <div class="width-70">
+                    <div class="width-70 flex align-it-center">
                         
-                        <img src="./assets/img/avatar_io.jpg" alt="mine-avatar" style="width: 3rem; border-radius: 50%;">
+                        <img src="./assets/img/avatar_io.jpg" alt="mine-avatar" style="width: 3rem; border-radius: 50%;" >
+
+                        <span class="ml-10 text-bold">
+                            Sofia
+                        </span>
 
                     </div>
 
@@ -56,8 +62,10 @@
 
                     </div>
                 </div>
+                <!-- end: user -->
 
-                <div class="debug padd-5 height-top-notifications" style="background-color: #8EDAFC;">
+                <!-- start: notify -->
+                <div class="padd-5 height-top-notifications bg-notification">
 
                     <div class="height-100p100 flex align-it-center padd-5">
                         
@@ -72,11 +80,21 @@
                     </div>
 
                 </div>
+                <!-- end: notify -->
+
+                <!-- start: chats -->
+                <div class="debug height-chats" style="overflow: auto;">
+                    
+                </div>
+                <!-- end: chats -->
                 
             </div>
+            <!-- end: left area -->
 
+            <!-- start: right area -->
             <div class="debug width-70">
 
+                <!-- start: main chat top -->
                 <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar">
 
                     <div class="width-70">
@@ -87,9 +105,16 @@
 
                     
                 </div>
+                <!-- end: main chat top -->
                 
+                <!-- start: main chat messages -->
+                <div class="debug height-main-chat" style="overflow: auto;">
+                    Chicco
+                </div>
+                <!-- end: main chat messages -->
                 
             </div>
+            <!-- end: right area -->
 
         </div>
 

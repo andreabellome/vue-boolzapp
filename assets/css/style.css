@@ -15,11 +15,23 @@
     background-color: #f0f0f0;
 }
 
+.bg-notification{
+    background-color: #8EDAFC;
+}
+
 .height-top-avatar{
     height: var(--height-top-avatar);
 }
 
 .height-top-notifications{
     height: var(--height-top-notifications);
+}
+
+.height-chats{
+    height: calc(100% - var(--height-top-notifications) - var(--height-top-avatar));
+}
+
+.height-main-chat{
+    height: calc(100% - var(--height-top-avatar));
 }
 
