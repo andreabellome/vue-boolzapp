@@ -59,3 +59,7 @@
     padding: 5px;
     border-bottom: 1px solid #d3d3d3;
 }
+
+.active-chat{
+    background-color: rgb(228, 228, 228);
+}

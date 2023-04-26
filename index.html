@@ -101,7 +101,7 @@
                 <div class="height-chats bg-white " style="overflow-y: scroll;">
                     
                     <!-- start: card with single chat (Vue) -->
-                    <div class="style-card-chat" v-for="(contact, index) in contacts" >
+                    <div class="style-card-chat" v-for="(contact, index) in contacts" v-bind:class="(currActive == index) ? 'style-card-chat active-chat' : 'style-card-chat' " @click="activeChat(index)">
                         <img v-bind:src="contact.avatar" alt="mine-avatar" style="width: 4rem; border-radius: 50%;">
 
                         <div class="width-75">

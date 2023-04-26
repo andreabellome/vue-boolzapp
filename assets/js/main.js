@@ -4,6 +4,8 @@ createApp({
       return {
         /* variables Vue 3 */
 
+        currActive: 0,
+
         contacts: [
         {
             name: 'Michele',
@@ -175,6 +177,8 @@ createApp({
     },
     methods: {
         /* functions Vue 3 */
-        
+        activeChat(index){
+            this.currActive = index;
+        }
     }
 }).mount('#app')
