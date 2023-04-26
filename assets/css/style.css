@@ -40,3 +40,10 @@
     height: calc(100% - var(--height-top-avatar) - var(--height-input-chat));
 }
 
+.height-input-chat{
+    height: var(--height-input-chat);
+}
+
+.width-30-important{
+    width: 30% !important;
+}
