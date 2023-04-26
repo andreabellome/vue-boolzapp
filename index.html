@@ -100,16 +100,13 @@
                 <!-- start: chats -->
                 <div class="height-chats bg-white " style="overflow: auto;">
                     
-                    
-
-                    <!-- start: card with single chat -->
-                    <div class="style-card-chat">
-                        
-                        <img src="./assets/img/avatar_1.jpg" alt="mine-avatar" style="width: 4rem; border-radius: 50%;">
+                    <!-- start: card with single chat (Vue) -->
+                    <div class="style-card-chat" v-for="(contact, index) in contacts" >
+                        <img v-bind:src="contact.avatar" alt="mine-avatar" style="width: 4rem; border-radius: 50%;">
 
                         <div class="width-75">
                             <span class="text-bold font-size-18">
-                                Michele
+                                {{contact.name}}
                             </span> <br>
                             <span class="font-size-15" style="color: #afafaf">
                                 Ultimo messaggio inviato
@@ -119,9 +116,9 @@
                         <div class="font-size-12" style="color: #afafaf">
                             12:00
                         </div>
-                        
+
                     </div>
-                    <!-- end: card with single chat -->
+                    <!-- end: card with single chat (Vue) -->
 
                 </div>
                 <!-- end: chats -->
