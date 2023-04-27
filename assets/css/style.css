@@ -63,3 +63,15 @@
 .active-chat{
     background-color: rgb(228, 228, 228);
 }
+
+.received{
+    border-radius: 10px;
+    align-self: flex-start;
+    background-color: #FFFFFF;
+}
+
+.sent{
+    border-radius: 10px;
+    align-self: flex-end;
+    background-color: #D9FCD2;
+}
