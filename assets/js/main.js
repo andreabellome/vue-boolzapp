@@ -173,15 +173,40 @@ createApp({
       }
     },
     mounted(){
-        
-        let mainChat = document.getElementById('mainChat');
-        mainChat.scrollTop = mainChat.scrollHeight;
 
     },
     methods: {
         /* functions Vue 3 */
         activeChat(index){
             this.currActive = index;
+        },
+
+        search(){
+
+            /* extract the message from input */
+            let inputMessage = document.getElementById('inputMessage').value;
+
+            /* add the corresponding div */
+            let mainChat = document.getElementById('mainChat');
+            let createDiv2 = document.createElement('div');
+            let createDivMess = document.createElement('div');
+            let createDivTime = document.createElement('div');
+
+            createDiv2.classList.add('sent');
+            
+            createDivMess.classList.add('font-size-14');
+            createDivMess.innerHTML = inputMessage;
+            
+            createDivTime.classList.add('hours-messages');
+            createDivTime.innerHTML = '12:00';
+
+            createDiv2.appendChild(createDivMess);
+            createDiv2.appendChild(createDivTime);
+            mainChat.appendChild(createDiv2);
+            
+            /* maintain the scroll to bottom */
+            mainChat.scrollTop = mainChat.scrollHeight;
+
         }
     }
 }).mount('#app')
