@@ -167,7 +167,7 @@
                 <!-- end: main chat top -->
                 
                 <!-- start: main chat messages -->
-                <div class="height-main-chat bg-chat-messages padd-10 flex flex-dir-col" style="overflow-y: scroll;">
+                <div class="height-main-chat bg-chat-messages padd-10 flex flex-dir-col" style="overflow-y: scroll;" id="mainChat">
 
                     <div v-for="(mess,idxmess) in contacts[currActive].messages" v-bind:class="(mess.status == 'sent') ? 'sent' : 'received' ">
                         <div class="font-size-14">

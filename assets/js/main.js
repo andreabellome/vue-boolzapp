@@ -174,6 +174,9 @@ createApp({
     },
     mounted(){
         
+        let mainChat = document.getElementById('mainChat');
+        mainChat.scrollTop = mainChat.scrollHeight;
+
     },
     methods: {
         /* functions Vue 3 */
