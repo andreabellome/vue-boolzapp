@@ -90,7 +90,7 @@
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control font-size-14" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
 
                     </div>
 
@@ -132,9 +132,34 @@
                 <!-- start: main chat top -->
                 <div class="flex flex-dir-row just-cont-between bg-top padd-5 height-top-avatar">
 
-                    <div class="width-70">
+                    <div class="width-80 flex align-it-center">
                         
-                        <img src="./assets/img/avatar_io.jpg" alt="mine-avatar" style="width: 3rem; border-radius: 50%;">
+                        <img v-bind:src="contacts[currActive].avatar" alt="mine-avatar" style="width: 3rem; border-radius: 50%;">
+
+                        <div class="ml-10 flex flex-dir-col width-80">
+                            <span class="text-bold">
+                                {{contacts[currActive].name}}
+                            </span>
+                            <span class="font-size-14">
+                                Ultimo accesso oggi alle 12:00
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="width-20 flex align-it-center just-cont-evenly">
+
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                        </a>
+                        
+                        <a href="#">
+                            <i class="fa-solid fa-paperclip fa-xl"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
+                        </a>
 
                     </div>
 
