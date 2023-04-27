@@ -168,29 +168,14 @@
                 
                 <!-- start: main chat messages -->
                 <div class="height-main-chat bg-chat-messages padd-10 flex flex-dir-col" style="overflow-y: scroll;">
-                    
-                    <div class="received padd-5 flex flex-dir-row">
 
+                    <div v-for="(mess,idxmess) in contacts[currActive].messages" v-bind:class="(mess.status == 'sent') ? 'sent' : 'received' ">
                         <div>
-                            Ricordati di chiamare la nonna
+                            {{mess.message}}
                         </div>
-                        
-                        <div class="font-size-10 ml-5" style="align-self: self-end;">
-                            12:00
+                        <div class="hours-messages">
+                            {{mess.date}}
                         </div>
-
-                    </div>
-
-                    <div class="sent padd-5 flex flex-dir-row">
-
-                        <div>
-                            Okay
-                        </div>
-                        
-                        <div class="font-size-10 ml-5" style="align-self: self-end;">
-                            12:00
-                        </div>
-
                     </div>
 
                 </div>

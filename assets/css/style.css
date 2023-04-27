@@ -68,10 +68,27 @@
     border-radius: 10px;
     align-self: flex-start;
     background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+
 }
 
 .sent{
     border-radius: 10px;
     align-self: flex-end;
     background-color: #D9FCD2;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.hours-messages{
+    font-size: 10px;
+    margin-left: 5px;
+    align-self: self-end;
 }
