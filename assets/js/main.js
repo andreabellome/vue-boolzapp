@@ -4,6 +4,8 @@ createApp({
       return {
         /* variables Vue 3 */
 
+        divChat: document.getElementById('mainChat'),
+
         currActive: 0,
 
         contacts: [
@@ -191,6 +193,8 @@ createApp({
 
         search(currActive){
 
+            updateScroll();
+
             /* extract the message from input */
             let inputMessage = document.getElementById('inputMessage');
             
@@ -199,6 +203,9 @@ createApp({
 
             /* add the message to the messages object */
             if (inputMessage.value !== '') {
+
+                updateScroll();
+
                 this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
 
                 updateScroll();
@@ -209,6 +216,8 @@ createApp({
                 /* add an answer */
                 setTimeout( () => {
 
+                    updateScroll();
+
                     let fullDateTimeReceived = getDateTimeWithLuxon();
 
                     this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
@@ -218,6 +227,10 @@ createApp({
                 }, 1500 )
 
             }
+
+            updateScroll();
+            /* console.log(this.divChat.scrollHeight)
+            this.divChat.scrollTop = this.divChat.scrollHeight; */
 
         }
     }
