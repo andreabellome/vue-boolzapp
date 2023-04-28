@@ -181,6 +181,7 @@ createApp({
     },
     methods: {
         /* functions Vue 3 */
+
         activeChat(index){
             this.currActive = index;
         },
@@ -197,6 +198,10 @@ createApp({
             if (inputMessage.value !== '') {
                 this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
                 
+                /* maintain the scroll to bottom */
+                let mainChat = document.getElementById('mainChat');
+                mainChat.scrollTo(0, mainChat.scrollHeight);
+
                 /* clear the input */
                 inputMessage.value = '';
 
@@ -207,18 +212,16 @@ createApp({
 
                     this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
 
+                    /* maintain the scroll to bottom */
+                    mainChat.scrollTo(0, mainChat.scrollHeight);
+
                 }, 1500 )
 
-
                 /* maintain the scroll to bottom */
-                let mainChat = document.getElementById('mainChat');
                 mainChat.scrollTo(0, mainChat.scrollHeight);
 
             }
 
-            
-            
-            
         }
     }
 }).mount('#app')
