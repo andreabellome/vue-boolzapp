@@ -174,16 +174,19 @@ createApp({
     },
     mounted(){
 
-        /* maintain the scroll to bottom */
-        let mainChat = document.getElementById('mainChat');
-        mainChat.scrollTo(0, mainChat.scrollHeight);
+        updateScroll();
 
     },
     methods: {
         /* functions Vue 3 */
 
         activeChat(index){
+
+            /* on click shift the chat down */
             this.currActive = index;
+
+            updateScroll();
+
         },
 
         search(currActive){
@@ -197,11 +200,9 @@ createApp({
             /* add the message to the messages object */
             if (inputMessage.value !== '') {
                 this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
-                
-                /* maintain the scroll to bottom */
-                let mainChat = document.getElementById('mainChat');
-                mainChat.scrollTo(0, mainChat.scrollHeight);
 
+                updateScroll();
+                
                 /* clear the input */
                 inputMessage.value = '';
 
@@ -212,13 +213,9 @@ createApp({
 
                     this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
 
-                    /* maintain the scroll to bottom */
-                    mainChat.scrollTo(0, mainChat.scrollHeight);
+                    updateScroll();
 
                 }, 1500 )
-
-                /* maintain the scroll to bottom */
-                mainChat.scrollTo(0, mainChat.scrollHeight);
 
             }
 

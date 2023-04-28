@@ -29,3 +29,8 @@ function getDateTimeWithLuxon(){
     return fullDateTime
 
 }
+
+function updateScroll(){
+    var element =  document.getElementById("mainChat");
+    element.scrollTop = element.scrollHeight;
+}

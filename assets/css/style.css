@@ -76,6 +76,8 @@
 
     max-width: 70%;
 
+    border: 1px dashed red;
+
 }
 
 .sent{
@@ -91,6 +93,8 @@
 
     max-width: 70%;
 
+    border: 1px dashed red;
+
 }
 
 .hours-messages{
@@ -100,5 +104,21 @@
 }
 
 .main-chat{
+
+    height: calc(100% - var(--height-top-avatar) - var(--height-input-chat));
+    background-image: url(../img/mine.jpg);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+
     overflow-x: none;
+    overflow-y: scroll;
+
+}
+
+.main-chat > :first-child {
+    margin-top: auto !important;
+    /* use !important to prevent breakage from child margin settings */
 }
