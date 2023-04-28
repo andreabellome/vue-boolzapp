@@ -176,7 +176,7 @@ createApp({
 
         /* maintain the scroll to bottom */
         let mainChat = document.getElementById('mainChat');
-        mainChat.scrollTop = mainChat.scrollHeight;
+        mainChat.scrollTo(0, mainChat.scrollHeight);
 
     },
     methods: {
@@ -215,17 +215,19 @@ createApp({
             }
             let fullDateTime = day + '/' + month + '/' + year + ' ' + hour + ':' + minute + ':' + second;
 
-            console.log(fullDateTime)
-
             /* add the message to the messages object */
             if (inputMessage.value !== '') {
                 this.contacts[currActive].messages.push({date: fullDateTime, message: inputMessage.value, status: 'sent'});
+                
+                /* maintain the scroll to bottom */
+                let mainChat = document.getElementById('mainChat');
+                mainChat.scrollTo(0, mainChat.scrollHeight);
+                
                 inputMessage.value = '';
             }
 
-            /* maintain the scroll to bottom */
-            let mainChat = document.getElementById('mainChat');
-            mainChat.scrollTop = mainChat.scrollHeight;
+            
+            
             
         }
     }
