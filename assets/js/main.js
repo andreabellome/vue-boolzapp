@@ -191,39 +191,29 @@ createApp({
             let inputMessage = document.getElementById('inputMessage');
             
             /* compute the time at which the message is generated */
-            const now = luxon.DateTime.now();
-            let year = now.year.toString();
-            let month = now.month.toString();
-            let day = now.day.toString();
-            let hour = now.hour.toString();
-            let minute = now.minute.toString();
-            let second = now.second.toString();
-            if (now.month < 10){
-                month = '0' + month;
-            }
-            if (now.day < 10){
-                day = '0' + day;
-            }
-            if (now.hour < 10){
-                hour = '0' + hour;
-            }
-            if (now.second < 10) {
-                second = '0' + second;
-            }
-            if (now.minute <10) {
-                minute = '0' + minute;
-            }
-            let fullDateTime = day + '/' + month + '/' + year + ' ' + hour + ':' + minute + ':' + second;
+            let fullDateTimeSent = getDateTimeWithLuxon();
 
             /* add the message to the messages object */
             if (inputMessage.value !== '') {
-                this.contacts[currActive].messages.push({date: fullDateTime, message: inputMessage.value, status: 'sent'});
+                this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
                 
+                /* clear the input */
+                inputMessage.value = '';
+
+                /* add an answer */
+                setTimeout( () => {
+
+                    let fullDateTimeReceived = getDateTimeWithLuxon();
+
+                    this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
+
+                }, 1500 )
+
+
                 /* maintain the scroll to bottom */
                 let mainChat = document.getElementById('mainChat');
                 mainChat.scrollTo(0, mainChat.scrollHeight);
-                
-                inputMessage.value = '';
+
             }
 
             
