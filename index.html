@@ -170,7 +170,7 @@
                 <div class="height-main-chat bg-chat-messages padd-10 flex flex-dir-col main-chat" style="overflow-y: scroll;" id="mainChat">
 
                     <div v-for="(mess,idxmess) in contacts[currActive].messages" v-bind:class="(mess.status == 'sent') ? 'sent' : 'received' ">
-                        <div class="font-size-14">
+                        <div class="font-size-14 overflow-hidden word-wrap-break-word">
                             {{mess.message}}
                         </div>
                         <div class="hours-messages">

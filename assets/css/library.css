@@ -746,6 +746,14 @@ a{
 }
 /* END: colors */
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.word-wrap-break-word{
+    word-wrap: break-word;
+}
+
 /* START: hover effects */
 .card-b{
     display: none;
