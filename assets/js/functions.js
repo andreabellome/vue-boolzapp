@@ -34,12 +34,3 @@ function updateScroll(){
     var element =  document.getElementById("mainChat");
     element.scrollTop = element.scrollHeight;
 }
-
-/* function searchChat(){
-    var input = document.getElementById('inputCercaChat');
-    var filter = input.value.toUpperCase();
-    var divChatCard = document.getElementById('divChatCard');
-
-
-
-} */
