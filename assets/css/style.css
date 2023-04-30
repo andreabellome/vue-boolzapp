@@ -76,8 +76,6 @@
 
     max-width: 70%;
 
-    border: 1px dashed red;
-
 }
 
 .sent{
@@ -92,9 +90,7 @@
     flex-wrap: wrap;
 
     max-width: 70%;
-
-    border: 1px dashed red;
-
+    
 }
 
 .hours-messages{

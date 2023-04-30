@@ -176,21 +176,24 @@ createApp({
     },
     mounted(){
 
-        updateScroll();
+        /* updateScroll(), */
+
+        
 
     },
     methods: {
         /* functions Vue 3 */
 
+        /* on click highlight the chat */
         activeChat(index){
 
-            /* on click shift the chat down */
             this.currActive = index;
 
             updateScroll();
 
         },
 
+        /* add a message to the main chat */
         search(currActive){
 
             updateScroll();
@@ -229,9 +232,29 @@ createApp({
             }
 
             updateScroll();
-            /* console.log(this.divChat.scrollHeight)
-            this.divChat.scrollTop = this.divChat.scrollHeight; */
+
+        },
+
+        /* search the chat using the input */
+        searchChat(){
+
+            var filter = document.getElementById('inputCercaChat').value.toUpperCase();
+
+            for (let i = 0; i < this.contacts.length; i++) {
+
+                var divChatCard = document.getElementById(i);
+                var spanName = document.getElementById(this.contacts[i].name);
+
+                txtValue = spanName.textContent || spanName.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1){
+                    divChatCard.style.display = '';
+                } else {
+                    divChatCard.style.display = 'none';
+                }
+                
+            }
 
         }
+
     }
 }).mount('#app')
