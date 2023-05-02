@@ -189,7 +189,9 @@ createApp({
 
             this.currActive = index;
 
-            updateScroll();
+            setTimeout( () => {
+                updateScroll();
+            }, 5 )
 
         },
 
@@ -211,6 +213,12 @@ createApp({
 
                 this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
 
+                setTimeout( () => {
+
+                    updateScroll();
+
+                }, 5 )
+
                 updateScroll();
                 
                 /* clear the input */
@@ -225,7 +233,9 @@ createApp({
 
                     this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
 
-                    updateScroll();
+                    setTimeout( () => {
+                        updateScroll();
+                    }, 5 )
 
                 }, 1500 )
 
