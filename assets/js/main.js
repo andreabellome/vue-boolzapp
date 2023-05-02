@@ -189,9 +189,10 @@ createApp({
 
             this.currActive = index;
 
+            /* search bar always at bottom */
             setTimeout( () => {
                 updateScroll();
-            }, 5 )
+            }, 3 )
 
         },
 
@@ -213,11 +214,10 @@ createApp({
 
                 this.contacts[currActive].messages.push({date: fullDateTimeSent, message: inputMessage.value, status: 'sent'});
 
+                /* search bar always at bottom */
                 setTimeout( () => {
-
                     updateScroll();
-
-                }, 5 )
+                }, 3 )
 
                 updateScroll();
                 
@@ -233,9 +233,10 @@ createApp({
 
                     this.contacts[currActive].messages.push({date: fullDateTimeReceived, message: 'ok!', status: 'received'});
 
+                    /* search bar always at bottom */
                     setTimeout( () => {
                         updateScroll();
-                    }, 5 )
+                    }, 3 )
 
                 }, 1500 )
 
