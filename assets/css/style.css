@@ -1,58 +1,57 @@
-:root{
+:root {
     --height-top-avatar: 70px;
     --height-top-notifications: 75px;
     --height-input-chat: 70px;
     --height-search-chat: 50px;
 }
 
-.bg-linear-grad{
-    background: linear-gradient(
-    to bottom,
-    #00A884 15%,
-    #DDDEDD 50px);
+.bg-linear-grad {
+    background: linear-gradient(to bottom,
+            #00A884 15%,
+            #DDDEDD 50px);
 }
 
-.bg-top{
+.bg-top {
     background-color: #f0f0f0;
 }
 
-.bg-notification{
+.bg-notification {
     background-color: #8EDAFC;
 }
 
-.bg-chat-messages{
+.bg-chat-messages {
     background-image: url(../img/mine.jpg);
 }
 
-.height-search-chat{
+.height-search-chat {
     height: var(--height-search-chat);
 }
 
-.height-top-avatar{
+.height-top-avatar {
     height: var(--height-top-avatar);
 }
 
-.height-top-notifications{
+.height-top-notifications {
     height: var(--height-top-notifications);
 }
 
-.height-chats{
+.height-chats {
     height: calc(100% - var(--height-top-notifications) - var(--height-top-avatar) - var(--height-search-chat));
 }
 
-.height-main-chat{
+.height-main-chat {
     height: calc(100% - var(--height-top-avatar) - var(--height-input-chat));
 }
 
-.height-input-chat{
+.height-input-chat {
     height: var(--height-input-chat);
 }
 
-.width-30-important{
+.width-30-important {
     width: 30% !important;
 }
 
-.style-card-chat{
+.style-card-chat {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,11 +59,11 @@
     border-bottom: 1px solid #d3d3d3;
 }
 
-.active-chat{
+.active-chat {
     background-color: rgb(228, 228, 228);
 }
 
-.received{
+.received {
     border-radius: 10px;
     align-self: flex-start;
     background-color: #FFFFFF;
@@ -78,7 +77,7 @@
 
 }
 
-.sent{
+.sent {
     border-radius: 10px;
     align-self: flex-end;
     background-color: #D9FCD2;
@@ -90,16 +89,16 @@
     flex-wrap: wrap;
 
     max-width: 70%;
-    
+
 }
 
-.hours-messages{
+.hours-messages {
     font-size: 10px;
     margin-left: 5px;
     align-self: self-end;
 }
 
-.main-chat{
+.main-chat {
 
     height: calc(100% - var(--height-top-avatar) - var(--height-input-chat));
     background-image: url(../img/mine.jpg);
@@ -107,14 +106,13 @@
 
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
 
     overflow-x: none;
     overflow-y: scroll;
 
 }
 
-.main-chat > :first-child {
+.main-chat> :first-child {
     margin-top: auto !important;
     /* use !important to prevent breakage from child margin settings */
 }
