@@ -225,7 +225,7 @@ createApp({
                 inputMessage.value = '';
 
                 /* add an answer */
-                /* setTimeout(() => {
+                setTimeout(() => {
 
                     updateScroll();
 
@@ -237,7 +237,7 @@ createApp({
                         updateScroll();
                     }, 3)
 
-                }, 1500) */
+                }, 1500)
 
             }
 
